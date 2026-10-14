@@ -41,7 +41,7 @@ export const fallbackFooter = `<footer>
 </footer>`;
 export const footerScript = `<script>(function(){var n=document.getElementById('nav');if(!n)return;function s(){n.classList.toggle('solid',window.scrollY>40)}addEventListener('scroll',s,{passive:true});s();})();</script>`;
 
-export const extraCss = `.prose figure{margin:28px 0 8px}.prose figure img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}.prose figcaption{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding-top:10px}.prose .credit{font-size:13px;color:var(--ink-3);margin:-2px 0 24px}.prose figure+.credit{margin-top:4px}
+export const extraCss = `.prose figure{margin:28px 0 8px}.prose figure img{width:100%;height:auto;display:block}.prose figcaption{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding-top:10px}.prose .credit{font-size:13px;color:var(--ink-3);margin:-2px 0 24px}.prose figure+.credit{margin-top:4px}
 .post-meta{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin:0 0 28px}
 .post-tags{display:flex;gap:8px;flex-wrap:wrap;margin:40px 0 0}.post-tags a{font-size:11px;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--line);padding:6px 10px}.post-tags a:hover{border-color:#fff}
 .origin{font-size:13px;color:var(--ink-3);margin-top:24px;padding-top:16px;border-top:1px solid var(--line)}.origin a{color:#fff;text-decoration:underline}

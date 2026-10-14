@@ -56,15 +56,31 @@ const words = md => md.replace(/!\[[^\]]*\]\([^)]*\)/g, '').replace(/[#*_>`]/g, 
 const readMin = md => Math.max(1, Math.round(words(md) / 200));
 // Local photos live in /media/blog/<name>-640.webp and -1200.webp; serve the small one to phones and cards.
 const local = u => /^\/media\/blog\/.+-(640|1200)\.webp$/.test(u || '');
+// Real pixel size of local WebP photos, so width/height attributes keep the true ratio.
+const sizeCache = new Map();
+function webpSize(u) {
+  if (sizeCache.has(u)) return sizeCache.get(u);
+  let r = null;
+  try {
+    const b = fs.readFileSync(path.join(SRC, u.replace(/^\//, '')));
+    const t = b.toString('ascii', 12, 16);
+    if (t === 'VP8X') r = [1 + b.readUIntLE(24, 3), 1 + b.readUIntLE(27, 3)];
+    else if (t === 'VP8 ') r = [b.readUInt16LE(26) & 0x3fff, b.readUInt16LE(28) & 0x3fff];
+    else if (t === 'VP8L') { const v = b.readUInt32LE(21); r = [(v & 0x3fff) + 1, ((v >> 14) & 0x3fff) + 1]; }
+  } catch {}
+  sizeCache.set(u, r); return r;
+}
 const img = (u, alt, w = 1200, extra = '') => {
   if (!u) return '';
   if (local(u)) {
     const base = u.replace(/-(640|1200)\.webp$/, '');
     const src = w <= 720 ? `${base}-640.webp` : `${base}-1200.webp`;
     const sizes = w <= 720 ? '(max-width: 760px) 100vw, 400px' : '(max-width: 760px) 100vw, 760px';
-    return `<img src="${esc(src)}" srcset="${esc(base)}-640.webp 640w, ${esc(base)}-1200.webp 1200w" sizes="${sizes}" alt="${esc(alt)}" width="${w}" height="${Math.round(w * 2 / 3)}" decoding="async" ${extra}>`;
+    const d = webpSize(src) || webpSize(u);
+    const dims = d ? `width="${d[0]}" height="${d[1]}"` : '';
+    return `<img src="${esc(src)}" srcset="${esc(base)}-640.webp 640w, ${esc(base)}-1200.webp 1200w" sizes="${sizes}" alt="${esc(alt)}" ${dims} decoding="async" ${extra}>`;
   }
-  return `<img src="${esc(u)}" alt="${esc(alt)}" width="${w}" height="${Math.round(w * 2 / 3)}" decoding="async" ${extra}>`;
+  return `<img src="${esc(u)}" alt="${esc(alt)}" decoding="async" ${extra}>`;
 };
 const absolute = (base, p) => base.replace(/\/$/, '') + p;
 const write = (rel, content) => { const f = path.join(OUT, rel); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, content); };
@@ -74,7 +90,7 @@ function renderMarkdown(md) {
   const renderer = new marked.Renderer();
   // marked v12 passes (href, title, text); v13+ passes a token object — support both
   const tok = (a, title, text) => (a && typeof a === 'object') ? a : { href: a, title, text };
-  renderer.image = (a, b, c) => { const { href, text } = tok(a, b, c); return `<figure>${img(href, text, 1200, 'loading="lazy" decoding="async"')}<figcaption>${esc(text)}</figcaption></figure>`; };
+  renderer.image = (a, b, c) => { const { href, text } = tok(a, b, c); return `<figure>${img(href, text, 1200, 'loading="lazy"')}<figcaption>${esc(text)}</figcaption></figure>`; };
   renderer.link = (a, b, c) => { const { href, title, text } = tok(a, b, c);
     const ext = /^https?:\/\//.test(href) && !href.startsWith(site.baseUrl);
     const rel = site.nofollow.test(href) ? ' rel="nofollow noopener"' : (ext ? ' rel="noopener"' : '');
