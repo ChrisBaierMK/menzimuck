@@ -372,3 +372,11 @@ dict(
  related=["pret-excavator-paianjen","menzi-muck-vs-kaiser-vs-euromach","inchiriere-sau-cumparare-excavator-paianjen"],
 ),
 ]
+
+# --- Removed guides (Chris, 14 Oct 2026): price guide and the Kaiser/Euromach comparison ---
+import re as _re
+REMOVED = {"pret-excavator-paianjen", "menzi-muck-vs-kaiser-vs-euromach"}
+ARTICLES = [a for a in ARTICLES if a["slug"] not in REMOVED]
+for _a in ARTICLES + [PILLAR]:
+    _a["related"] = [r for r in _a.get("related", []) if r not in REMOVED]
+    _a["body"] = _re.sub(r'<a href="/ghid/(?:pret-excavator-paianjen|menzi-muck-vs-kaiser-vs-euromach)/">(.*?)</a>', r'\1', _a["body"])

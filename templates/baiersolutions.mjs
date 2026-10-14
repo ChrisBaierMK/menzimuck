@@ -7,7 +7,7 @@ export const site = {
   phone: '+40 723 675 581', phoneHref: 'tel:+40723675581', email: 'christoph@baiersolutions.ro',
   indexTags: false, onlyTags: null,
   nofollow: /mascus|machineryzone|machinerypark|machineryline|olx\.ro/,
-  org: { '@type': 'LocalBusiness', '@id': 'https://baiersolutions.ro/#business', name: 'Baier Solutions', legalName: 'Baier Solutions SRL', url: 'https://baiersolutions.ro/', image: 'https://baiersolutions.ro/img/hero-pano-1920.webp', telephone: '+40 723 675 581', email: 'christoph@baiersolutions.ro', address: { '@type': 'PostalAddress', addressLocality: 'Hărman', addressRegion: 'Brașov', addressCountry: 'RO' }, sameAs: ['https://menzi-muck.ro', 'https://mk1930.ro', 'https://actioncloud.co'] },
+  org: { '@type': 'LocalBusiness', '@id': 'https://baiersolutions.ro/#business', name: 'Baier Solutions', legalName: 'Baier Solutions SRL', url: 'https://baiersolutions.ro/', image: 'https://baiersolutions.ro/img/hero-pano-1920.webp', telephone: '+40 723 675 581', email: 'christoph@baiersolutions.ro', address: { '@type': 'PostalAddress', addressLocality: 'Hărman', addressRegion: 'Brașov', addressCountry: 'RO' }, sameAs: ['https://menzimuck.ro', 'https://mk1930.ro', 'https://actioncloud.co'] },
 };
 
 export const fallbackHeader = `<header id="hdr">

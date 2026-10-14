@@ -26,7 +26,6 @@ const SRC = path.resolve(root, String(args.src || '.'));
 const OUT = path.resolve(root, String(args.out || '.'));
 const FROM = args.from ? path.resolve(root, String(args.from)) : null;
 const PER_PAGE = 12;
-const USE_CDN = !process.env.NO_IMAGE_CDN;
 
 if (!['menzimuck', 'baiersolutions'].includes(SITE)) { console.error(`--site must be menzimuck or baiersolutions (got "${SITE}")`); process.exit(1); }
 const T = await import(`../templates/${SITE}.mjs`);
@@ -55,8 +54,18 @@ const months = ['ianuarie', 'februarie', 'martie', 'aprilie', 'mai', 'iunie', 'i
 const dateRo = iso => { const d = new Date(iso); return `${d.getUTCDate()} ${months[d.getUTCMonth()]} ${d.getUTCFullYear()}`; };
 const words = md => md.replace(/!\[[^\]]*\]\([^)]*\)/g, '').replace(/[#*_>`]/g, '').split(/\s+/).filter(Boolean).length;
 const readMin = md => Math.max(1, Math.round(words(md) / 200));
-const cdn = (u, w) => (USE_CDN && /^https?:\/\//.test(u)) ? `/.netlify/images?url=${encodeURIComponent(u)}&w=${w}&fm=webp&q=78` : u;
-const img = (u, alt, w = 1200, extra = '') => u ? `<img src="${esc(cdn(u, w))}" data-src="${esc(u)}" alt="${esc(alt)}" width="${w}" height="${Math.round(w * 2 / 3)}" ${extra} onerror="if(this.dataset.src&&this.src!==this.dataset.src){this.src=this.dataset.src}">` : '';
+// Local photos live in /media/blog/<name>-640.webp and -1200.webp; serve the small one to phones and cards.
+const local = u => /^\/media\/blog\/.+-(640|1200)\.webp$/.test(u || '');
+const img = (u, alt, w = 1200, extra = '') => {
+  if (!u) return '';
+  if (local(u)) {
+    const base = u.replace(/-(640|1200)\.webp$/, '');
+    const src = w <= 720 ? `${base}-640.webp` : `${base}-1200.webp`;
+    const sizes = w <= 720 ? '(max-width: 760px) 100vw, 400px' : '(max-width: 760px) 100vw, 760px';
+    return `<img src="${esc(src)}" srcset="${esc(base)}-640.webp 640w, ${esc(base)}-1200.webp 1200w" sizes="${sizes}" alt="${esc(alt)}" width="${w}" height="${Math.round(w * 2 / 3)}" decoding="async" ${extra}>`;
+  }
+  return `<img src="${esc(u)}" alt="${esc(alt)}" width="${w}" height="${Math.round(w * 2 / 3)}" decoding="async" ${extra}>`;
+};
 const absolute = (base, p) => base.replace(/\/$/, '') + p;
 const write = (rel, content) => { const f = path.join(OUT, rel); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, content); };
 const h = { esc, dateRo, readMin, img };

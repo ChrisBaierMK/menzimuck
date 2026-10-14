@@ -1,14 +1,14 @@
 // menzi-muck.ro blog template — mirrors the site's own /ghid/ article pages (build.py), reusing /css/site.css.
 export const site = {
-  key: 'menzimuck', name: 'Menzi Muck România', baseUrl: 'https://menzi-muck.ro', lang: 'ro',
+  key: 'menzimuck', name: 'Menzi Muck România', baseUrl: 'https://menzimuck.ro', lang: 'ro',
   blogTitle: 'Blog Menzi Muck România', blogH1: 'Blog: Menzi Muck în lume și în România',
   blogDescription: 'Noutăți Menzi Muck din toată lumea, explicate pentru șantierele din România: modele noi, lucrări pe pante și în albii, târguri, service și finanțare.',
-  blogHero: '/images/slope.jpg', ogImage: 'https://menzi-muck.ro/images/m545x-2.jpg',
+  blogHero: '/images/slope.jpg', ogImage: 'https://menzimuck.ro/images/m545x-2.jpg',
   phone: '+40 723 675 581', phoneHref: 'tel:+40723675581', email: 'christoph@baiersolutions.ro',
   indexTags: true, onlyTags: ['menzi-muck'],
   nofollow: /mascus|machineryzone|machinerypark|machineryline|olx\.ro/,
   fonts: '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">',
-  org: { '@type': 'Organization', '@id': 'https://menzi-muck.ro/#org', name: 'Baier Solutions SRL', alternateName: 'Menzi Muck România', url: 'https://menzi-muck.ro/', logo: 'https://menzi-muck.ro/images/logo.svg', telephone: '+40 723 675 581', email: 'christoph@baiersolutions.ro', vatID: 'RO33270728', address: { '@type': 'PostalAddress', addressLocality: 'Hărman', addressRegion: 'Brașov', addressCountry: 'RO' }, areaServed: ['RO', 'MD'], knowsLanguage: ['ro', 'de', 'en'], brand: { '@type': 'Brand', name: 'Menzi Muck' }, sameAs: ['https://menzimuck.com', 'https://baiersolutions.ro'] },
+  org: { '@type': 'Organization', '@id': 'https://menzimuck.ro/#org', name: 'Baier Solutions SRL', alternateName: 'Menzi Muck România', url: 'https://menzimuck.ro/', logo: 'https://menzimuck.ro/images/logo.svg', telephone: '+40 723 675 581', email: 'christoph@baiersolutions.ro', vatID: 'RO33270728', address: { '@type': 'PostalAddress', addressLocality: 'Hărman', addressRegion: 'Brașov', addressCountry: 'RO' }, areaServed: ['RO', 'MD'], knowsLanguage: ['ro', 'de', 'en'], brand: { '@type': 'Brand', name: 'Menzi Muck' }, sameAs: ['https://menzimuck.com', 'https://baiersolutions.ro'] },
 };
 
 // Fallbacks used only when the site's index.html cannot be read.
@@ -67,7 +67,7 @@ export function head({ title, description, canonical, ogImage, ogType, jsonld, n
 <meta property="og:image" content="${ogImage}">
 <meta property="og:type" content="${ogType}">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="alternate" type="application/rss+xml" title="Blog Menzi Muck România" href="https://menzi-muck.ro/blog/feed.xml">
+<link rel="alternate" type="application/rss+xml" title="Blog Menzi Muck România" href="https://menzimuck.ro/blog/feed.xml">
 ${jsonld}
 ${site.fonts}
 <link rel="stylesheet" href="/css/site.css">

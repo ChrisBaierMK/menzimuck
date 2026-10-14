@@ -172,7 +172,7 @@ def series_nav(active):
     a = "".join(f'<a href="/{s["slug"]}.html"{" aria-current=page" if s["slug"]==active else ""}>Menzi Muck {esc(s["name"])}</a>' for s in SERIES)
     return f'<nav class="series-nav">{a}</nav>'
 
-BASE = "https://menzi-muck.ro"   # switch to https://menzimuck.ro once that domain is live at ROTLD
+BASE = "https://menzimuck.ro"   # switch to https://menzimuck.ro once that domain is live at ROTLD
 ORG = {"@type":"Organization","@id":BASE+"/#org","name":COMPANY,"alternateName":"Menzi Muck România","url":BASE+"/",
        "logo":BASE+"/images/logo.svg","telephone":PHONE,"email":EMAIL,"vatID":"RO33270728",
        "address":{"@type":"PostalAddress","addressLocality":"Hărman","addressRegion":"Brașov","addressCountry":"RO"},
@@ -383,7 +383,7 @@ def build_series():
 <section class="panel short center">
   <div class="media">{img('slope.jpg','')}</div>
   <div class="wrap"><h2>Vrei să-l vezi lucrând?</h2><p class="sub">Vă ducem la un Menzi Muck în lucru și venim pe șantierul dumneavoastră cu un calcul de cost pe oră pentru lucrarea concretă.</p>
-  <p class="sub"><a href="/excavator-paianjen/" style="text-decoration:underline">Ce este un excavator păianjen și cum alegi modelul</a> · <a href="/ghid/pret-excavator-paianjen/" style="text-decoration:underline">Cât costă</a></p>
+  <p class="sub"><a href="/excavator-paianjen/" style="text-decoration:underline">Ce este un excavator păianjen și cum alegi modelul</a></p>
   <div class="btn-row"><a class="btn solid" href="/#contact">Programează o vizită</a><a class="btn" href="{PHONE_HREF}">{PHONE}</a></div></div>
 </section>
 """ + FOOT

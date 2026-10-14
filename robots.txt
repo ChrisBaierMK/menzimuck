@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /multumim.html
 
-Sitemap: https://menzi-muck.ro/sitemap.xml
+Sitemap: https://menzimuck.ro/sitemap.xml
