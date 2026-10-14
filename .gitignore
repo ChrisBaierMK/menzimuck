@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.netlify/
+_tmp-claude/
+__pycache__/
+*.zip
+*.tgz

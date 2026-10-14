@@ -1,0 +1,16 @@
+[build]
+  publish = "."
+  command = "npm install --no-audit --no-fund && node scripts/build-blog.mjs --site menzimuck --src . --out ."
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+
+# Netlify Image CDN may resize/convert the manufacturer's photos used by the blog
+[images]
+  remote_images = ["https://menzimuck\\.com/.*", "https://ygpmfswujykahqlkzqfg\\.supabase\\.co/.*"]

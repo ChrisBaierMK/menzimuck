@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /multumim.html
+
+Sitemap: https://menzi-muck.ro/sitemap.xml

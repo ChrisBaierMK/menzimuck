@@ -1,0 +1,20 @@
+{
+  "name": "baier-blog-kit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Builds the shared Supabase blog into static pages for menzi-muck.ro and baiersolutions.ro",
+  "scripts": {
+    "build": "node scripts/build-blog.mjs --src . --out dist",
+    "build:menzimuck": "node scripts/build-blog.mjs --site menzimuck --src . --out dist",
+    "build:baiersolutions": "node scripts/build-blog.mjs --site baiersolutions --src . --out dist",
+    "preview:menzimuck": "node scripts/build-blog.mjs --site menzimuck --from seed-posts --src . --out dist",
+    "preview:baiersolutions": "node scripts/build-blog.mjs --site baiersolutions --from seed-posts --src . --out dist"
+  },
+  "dependencies": {
+    "marked": "^12.0.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
