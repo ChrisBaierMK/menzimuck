@@ -12,6 +12,9 @@ h1,h2,h3{font-weight:600;letter-spacing:.02em;line-height:1.02;margin:0;text-tra
 p{margin:0 0 1em}
 .wrap{max-width:1400px;margin:0 auto;padding:0 clamp(20px,4vw,64px)}
 .eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);margin-bottom:14px}
+/* RO/EN language toggle */
+.lang-ro [data-en]{display:none}
+.lang-en [data-ro]{display:none}
 
 /* ---------- nav ---------- */
 .nav{position:fixed;inset:0 0 auto 0;z-index:50;background:linear-gradient(180deg,rgba(0,0,0,.7),rgba(0,0,0,0));transition:background .3s}
@@ -30,6 +33,10 @@ p{margin:0 0 1em}
 .nav ul a:hover,.nav ul a[aria-current]{border-bottom-color:#fff;opacity:1}
 .nav .cta{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:12px 20px;border:1px solid #fff;transition:background .2s,color .2s}
 .nav .cta:hover{background:#fff;color:#000}
+.lang{display:inline-flex;gap:2px;align-items:center;flex-shrink:0}
+.lang button{background:none;border:0;cursor:pointer;font:inherit;font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--ink-3);padding:6px 7px;text-transform:uppercase;transition:color .2s}
+.lang button:hover{color:var(--ink-2)}
+.lang button[aria-pressed=true]{color:#fff}
 .menu-btn{display:none;background:none;border:0;color:#fff;font:inherit;font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;padding:8px 0}
 @media(max-width:1180px){
   .nav ul{display:none;position:absolute;left:0;right:0;top:84px;background:#000;flex-direction:column;gap:0;padding:8px 0 16px;border-bottom:1px solid var(--line)}
@@ -127,7 +134,10 @@ section.text p{color:var(--ink-2)}
 .attach p{font-size:13px;color:var(--ink-2);margin:0}
 @media(max-width:900px){.attach{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.attach{grid-template-columns:1fr}.attach a,.attach div{min-height:260px}}
-.hydro{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:48px 0 96px}
+.hydro{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:48px 0 24px}
+.hydro-note{padding-bottom:96px}.hydro-note p{font-size:15px;color:var(--ink-2);max-width:70ch}
+.cells.two{grid-template-columns:repeat(2,1fr)}
+@media(max-width:900px){.cells.two{grid-template-columns:1fr}}
 .hydro div{border-top:1px solid #fff;padding-top:16px}
 .hydro b{display:block;font-size:34px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
 .hydro span{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin-top:8px}
