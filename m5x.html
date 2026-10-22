@@ -22,42 +22,49 @@
 <link rel="stylesheet" href="/css/site.css">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>
-<body>
+<body class="lang-ro">
 <header class="nav" id="nav">
   <div class="wrap">
     <a class="brand" href="/" aria-label="Menzi Muck România — Baier Solutions, importator oficial România și Republica Moldova">
       <img class="mm" src="/images/logo-neg.svg" alt="Menzi Muck" width="92" height="36">
       <img class="bs" src="/images/baier-solutions.svg" alt="Baier Solutions" width="80" height="30">
-      <span class="by">Importator oficial<b>România și Republica Moldova</b></span>
+      <span class="by"><span data-ro>Importator oficial<b>România și Republica Moldova</b></span><span data-en>Official importer<b>Romania &amp; Republic of Moldova</b></span></span>
     </a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" onclick="var n=document.getElementById('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">Meniu</button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" onclick="var n=document.getElementById('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))"><span data-ro>Meniu</span><span data-en>Menu</span></button>
     <ul id="menu">
-      <li><a href="/#modele" aria-current="page">Modele</a></li>
-      <li><a href="/excavator-paianjen/">Excavator păianjen</a></li>
-      <li><a href="/#domenii">Domenii</a></li>
-      <li><a href="/#versatilitate">Versatilitate</a></li>
-      <li><a href="/ghid/">Ghid</a></li>
+      <li><a href="/#modele" aria-current="page"><span data-ro>Modele</span><span data-en>Models</span></a></li>
+      <li><a href="/excavator-paianjen/"><span data-ro>Excavator păianjen</span><span data-en>Spider excavator</span></a></li>
+      <li><a href="/#domenii"><span data-ro>Domenii</span><span data-en>Applications</span></a></li>
+      <li><a href="/#versatilitate"><span data-ro>Versatilitate</span><span data-en>Attachments</span></a></li>
+      <li><a href="/ghid/"><span data-ro>Ghid</span><span data-en>Guide</span></a></li>
       <li><a href="/blog/">Blog</a></li>
-      <li><a href="/#despre">Despre</a></li>
+      <li><a href="/#despre"><span data-ro>Despre</span><span data-en>About</span></a></li>
     </ul>
-    <a class="cta" href="/#contact">Cere ofertă</a>
+    <div class="lang" role="group" aria-label="Limbă / Language"><button type="button" data-lang="ro" aria-pressed="true">RO</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+    <a class="cta" href="/#contact"><span data-ro>Cere ofertă</span><span data-en>Get a quote</span></a>
   </div>
 </header>
 
 <section class="panel">
   <div class="media"><img src="/images/m545x-2.jpg" alt="Menzi Muck M5x"></div>
   <div class="wrap">
-    <div class="label rv">Excavator păianjen · Seria M5x</div>
+    <div class="label rv"><span data-ro>Excavator păianjen · Seria M5x</span><span data-en>Spider excavator · M5x series</span></div>
     <h1 class="rv d1">Menzi Muck M5x</h1>
-    <p class="sub rv d2">de la 12.400 kg · Clasa grea pentru pante extreme</p>
-    <div class="btn-row rv d3"><a class="btn solid" href="#m545x">Date tehnice</a><a class="btn" href="/#contact">Cere ofertă</a></div>
+    <p class="sub rv d2"><span data-ro>de la 12.400 kg</span><span data-en>from 12,400 kg</span> · <span data-ro>Clasa grea pentru pante extreme</span><span data-en>Heavy class for extreme slopes</span></p>
+    <div class="btn-row rv d3"><a class="btn solid" href="#m545x"><span data-ro>Date tehnice</span><span data-en>Technical data</span></a><a class="btn" href="/#contact"><span data-ro>Cere ofertă</span><span data-en>Get a quote</span></a></div>
   </div>
 </section>
 <nav class="series-nav"><a href="/m5x.html" aria-current=page>Menzi Muck M5x</a><a href="/m4x.html">Menzi Muck M4x</a><a href="/m2.html">Menzi Muck M2</a><a href="/a20-a25.html">Menzi Muck A20 / A25</a></nav>
 <section class="text">
   <div class="wrap">
-    <div><div class="eyebrow">Seria M5x</div><h2>Clasa grea pentru pante extreme</h2></div>
-    <div><p class="lead">Seria M5x lucrează în siguranță pe pante de până la 45° în linia de cădere și 30° în linia de nivel, cu șasiul patentat Menzi Muck pe bază X. Ecartamentul se deschide până la 6 metri — o stabilitate pe care un excavator clasic de 13 tone nu o are. Motor Deutz de 156 CP, hidraulică load-sensing Rexroth, intervale de service de 500 de ore.</p></div>
+    <div><div class="eyebrow"><span data-ro>Seria M5x</span><span data-en>M5x series</span></div><h2><span data-ro>Clasa grea pentru pante extreme</span><span data-en>Heavy class for extreme slopes</span></h2></div>
+    <div><p class="lead"><span data-ro>Seria M5x lucrează în siguranță pe pante de până la 45° în linia de cădere și 30° în linia de nivel, cu șasiul patentat Menzi Muck pe bază X. Ecartamentul se deschide până la 6 metri — o stabilitate pe care un excavator clasic de 13 tone nu o are. Motor Deutz de 156 CP, hidraulică load-sensing Rexroth, intervale de service de 500 de ore.</span><span data-en>The M5x series works safely on slopes up to 45° in the fall line and 30° across it, on Menzi Muck's patented X-base chassis. The track gauge opens up to 6 metres — stability a conventional 13-tonne excavator simply doesn't have. 156 hp Deutz engine, Rexroth load-sensing hydraulics, 500-hour service intervals.</span></p></div>
+  </div>
+</section>
+<section class="text" style="padding-top:0">
+  <div class="wrap">
+    <div><div class="eyebrow"><span data-ro>Dotări</span><span data-en>Features</span></div><h2><span data-ro>Ce mai poate M5x</span><span data-en>What else the M5x can do</span></h2></div>
+    <div class="cells two"><div><h3><span data-ro>Pompă Powerline pentru accesorii</span><span data-en>Powerline pump for attachments</span></h3><p><span data-ro>Alimentare prioritară cu până la 220 l/min și maximum 350 bar. Debitul și presiunea se selectează din display. Furtun hidraulic: tur 1 țol, retur 1 ¼ țol.</span><span data-en>Priority feed of up to 220 l/min and a maximum of 350 bar. Flow and pressure are selected on the display. Hydraulic hose: 1 inch supply, 1 ¼ inch return.</span></p></div><div><h3><span data-ro>Moduri de direcție</span><span data-en>Steering modes</span></h3><p><span data-ro>Direcție pe puntea față, direcție pe puntea spate, direcție integrală pe patru roți și mers în crab.</span><span data-en>Front-axle steering, rear-axle steering, four-wheel steering and crab steering.</span></p></div><div><h3><span data-ro>Mod lanțuri</span><span data-en>Chain mode</span></h3><p><span data-ro>Cu lanțuri montate, protecția la coliziune se asigură prin activarea electrică a modului pentru lanțuri forestiere sau de zăpadă.</span><span data-en>With chains fitted, collision protection is ensured by electrically switching on forestry or snow-chain mode.</span></p></div><div><h3><span data-ro>Tracțiune maximă</span><span data-en>Maximum traction</span></h3><p><span data-ro>Blocajul hidraulic de diferențial asigură tracțiune maximă pe teren alunecos sau moale. Se activează manual, pentru și mai multă putere în modul off-road.</span><span data-en>The hydraulic differential lock ensures maximum traction on slippery or soft ground. It can be engaged manually for even more performance in off-road mode.</span></p></div><div><h3><span data-ro>„Nu se poate” nu există</span><span data-en>There's no such thing as “can't”</span></h3><p><span data-ro>Pe pante de până la 100 % (45°), în apă de până la 2,2 m adâncime sau în mlaștină adâncă, la munte sau în pădure — M5x are foarte puține limite. Șasiul flexibil se adaptează oricărui teren; în construcții, M5x depășește posibilitățile unui excavator pe șenile cu aceeași putere hidraulică.</span><span data-en>On slopes up to 100 % (45°), in water up to 2.2 m deep or in deep mud, in the mountains or in the forest — the M5x has very few limits. The flexible chassis adapts to any ground; in construction it goes beyond what a tracked excavator with the same hydraulic power can do.</span></p></div><div><h3><span data-ro>Purtător pentru foraj, pădure și cale ferată</span><span data-en>Carrier for drilling, forestry and rail</span></h3><p><span data-ro>M5x este un purtător excelent pentru diferite sisteme de foraj și pentru accesorii mari consumatoare de putere, municipale sau forestiere. În pădure lucrează ca harvester pe pante abrupte — în doborâturi de vânt, rărituri țintite sau tăieri rase. Ca excavator rutier-feroviar, Menzi Muck are avantaje enorme pe și lângă calea ferată.</span><span data-en>The M5x is an excellent carrier for various drilling systems and for power-hungry municipal or forestry attachments. In the forest it works as a steep-slope harvester — in windthrow, selective thinning or clear-cutting. As a road-rail excavator, the Menzi Muck has huge advantages on and beside the track.</span></p></div></div>
   </div>
 </section>
 <div class="gallery"><img src="/images/m545x.jpg" alt="Menzi Muck M5x" loading="lazy"><img src="/images/m545x-3.jpg" alt="Menzi Muck M5x" loading="lazy"><img src="/images/m525x-2.jpg" alt="Menzi Muck M5x" loading="lazy"></div>
@@ -66,60 +73,72 @@
   <div class="wrap">
     <div><img src="/images/m545x.jpg" alt="Menzi Muck M545x" class="pic" loading="lazy">
       <h2>Menzi Muck M545x</h2>
-      <div class="kg">de la 13.500 kg</div>
-      <ul class="chips"><li>Transmisie continuă Vx-Drive by Menzi, până la 15 km/h</li><li>Sprijin paralel P-Vation by Menzi</li><li>Patru roți de aceeași mărime, lățime până la 800 mm</li><li>Suporturi de pantă față și/sau spate (opțional)</li></ul>
-      <a class="btn solid" href="/#contact">Cere ofertă pentru M545x</a>
+      <div class="kg"><span data-ro>de la 13.500 kg</span><span data-en>from 13,500 kg</span></div>
+      <ul class="chips"><li><span data-ro>Transmisie continuă Vx-Drive by Menzi, până la 15 km/h</span><span data-en>Continuous Vx-Drive transmission by Menzi, up to 15 km/h</span></li><li><span data-ro>Sprijin paralel P-Vation by Menzi</span><span data-en>P-Vation parallel support by Menzi</span></li><li><span data-ro>Patru roți de aceeași mărime, lățime până la 800 mm</span><span data-en>Four equal-size wheels, up to 800 mm wide</span></li><li><span data-ro>Suporturi de pantă față și/sau spate (opțional)</span><span data-en>Front and/or rear slope supports (optional)</span></li></ul>
+      <a class="btn solid" href="/#contact"><span data-ro>Cere ofertă pentru M545x</span><span data-en>Request a quote for M545x</span></a>
     </div>
-    <div><table class="spec"><caption>Date tehnice</caption><tr><th>Motor</th><td>Deutz turbo diesel, 4 cilindri — 115 kW / 156 CP</td></tr><tr><th>Cilindree</th><td>4.038 cm³</td></tr><tr><th>Instalație electrică</th><td>24 V</td></tr><tr><th>Demaror</th><td>4,0 kW</td></tr><tr><th>Interval service</th><td>500 h</td></tr><tr><th>Sistem hidraulic</th><td>Load Sensing by Rexroth</td></tr><tr><th>Pompă de lucru</th><td>290 l/min · 300 bar</td></tr><tr><th>Pompă deplasare</th><td>210 l/min · 400 bar</td></tr><tr><th>Powerline (opțional)</th><td>220 l/min</td></tr><tr><th>Viteză de rotire</th><td>până la 10 rot/min</td></tr></table></div>
+    <div><table class="spec"><caption><span data-ro>Date tehnice</span><span data-en>Technical data</span></caption><tr><th><span data-ro>Motor</span><span data-en>Engine</span></th><td><span data-ro>Deutz turbo diesel, 4 cilindri — 115 kW / 156 CP</span><span data-en>Deutz turbo diesel, 4 cyl. — 115 kW / 156 hp</span></td></tr><tr><th><span data-ro>Cilindree</span><span data-en>Displacement</span></th><td><span data-ro>4.038 cm³</span><span data-en>4.038 cm³</span></td></tr><tr><th><span data-ro>Instalație electrică</span><span data-en>Electrical system</span></th><td><span data-ro>24 V</span><span data-en>24 V</span></td></tr><tr><th><span data-ro>Demaror</span><span data-en>Starter</span></th><td><span data-ro>4,0 kW</span><span data-en>4,0 kW</span></td></tr><tr><th><span data-ro>Interval service</span><span data-en>Service interval</span></th><td><span data-ro>500 h</span><span data-en>500 h</span></td></tr><tr><th><span data-ro>Sistem hidraulic</span><span data-en>Hydraulic system</span></th><td><span data-ro>Load Sensing by Rexroth</span><span data-en>Load Sensing by Rexroth</span></td></tr><tr><th><span data-ro>Pompă de lucru</span><span data-en>Work pump</span></th><td><span data-ro>290 l/min · 300 bar</span><span data-en>290 l/min · 300 bar</span></td></tr><tr><th><span data-ro>Pompă deplasare</span><span data-en>Travel pump</span></th><td><span data-ro>210 l/min · 400 bar</span><span data-en>210 l/min · 400 bar</span></td></tr><tr><th><span data-ro>Powerline (opțional)</span><span data-en>Powerline (optional)</span></th><td><span data-ro>220 l/min · max. 350 bar</span><span data-en>220 l/min · max. 350 bar</span></td></tr><tr><th><span data-ro>Viteză de rotire</span><span data-en>Slewing speed</span></th><td><span data-ro>până la 10 rot/min</span><span data-en>up to 10 rpm</span></td></tr></table></div>
   </div>
 </article>
 <article class="model" id="m535x">
   <div class="wrap">
     <div><img src="/images/m535x.jpg" alt="Menzi Muck M535x" class="pic" loading="lazy">
       <h2>Menzi Muck M535x</h2>
-      <div class="kg">de la 13.000 kg</div>
-      <ul class="chips"><li>Transmisie continuă Vx-Drive by Menzi, până la 11 km/h</li><li>Sprijin paralel P-Vation by Menzi</li><li>Reglare hidraulică a înălțimii roților directoare</li><li>Sprijin telescopic hidraulic</li></ul>
-      <a class="btn solid" href="/#contact">Cere ofertă pentru M535x</a>
+      <div class="kg"><span data-ro>de la 13.000 kg</span><span data-en>from 13,000 kg</span></div>
+      <ul class="chips"><li><span data-ro>Transmisie continuă Vx-Drive by Menzi, până la 11 km/h</span><span data-en>Continuous Vx-Drive transmission by Menzi, up to 11 km/h</span></li><li><span data-ro>Sprijin paralel P-Vation by Menzi</span><span data-en>P-Vation parallel support by Menzi</span></li><li><span data-ro>Reglare hidraulică a înălțimii roților directoare</span><span data-en>Hydraulic height adjustment of the steering wheels</span></li><li><span data-ro>Sprijin telescopic hidraulic</span><span data-en>Hydraulic telescopic support</span></li></ul>
+      <a class="btn solid" href="/#contact"><span data-ro>Cere ofertă pentru M535x</span><span data-en>Request a quote for M535x</span></a>
     </div>
-    <div><table class="spec"><caption>Date tehnice</caption><tr><th>Motor</th><td>Deutz turbo diesel, 4 cilindri — 115 kW / 156 CP</td></tr><tr><th>Cilindree</th><td>4.038 cm³</td></tr><tr><th>Instalație electrică</th><td>24 V</td></tr><tr><th>Demaror</th><td>4,0 kW</td></tr><tr><th>Interval service</th><td>500 h</td></tr><tr><th>Sistem hidraulic</th><td>Load Sensing by Rexroth</td></tr><tr><th>Pompă de lucru</th><td>290 l/min · 300 bar</td></tr><tr><th>Pompă deplasare</th><td>210 l/min · 400 bar</td></tr><tr><th>Powerline (opțional)</th><td>220 l/min</td></tr><tr><th>Viteză de rotire</th><td>până la 10 rot/min</td></tr></table></div>
+    <div><table class="spec"><caption><span data-ro>Date tehnice</span><span data-en>Technical data</span></caption><tr><th><span data-ro>Motor</span><span data-en>Engine</span></th><td><span data-ro>Deutz turbo diesel, 4 cilindri — 115 kW / 156 CP</span><span data-en>Deutz turbo diesel, 4 cyl. — 115 kW / 156 hp</span></td></tr><tr><th><span data-ro>Cilindree</span><span data-en>Displacement</span></th><td><span data-ro>4.038 cm³</span><span data-en>4.038 cm³</span></td></tr><tr><th><span data-ro>Instalație electrică</span><span data-en>Electrical system</span></th><td><span data-ro>24 V</span><span data-en>24 V</span></td></tr><tr><th><span data-ro>Demaror</span><span data-en>Starter</span></th><td><span data-ro>4,0 kW</span><span data-en>4,0 kW</span></td></tr><tr><th><span data-ro>Interval service</span><span data-en>Service interval</span></th><td><span data-ro>500 h</span><span data-en>500 h</span></td></tr><tr><th><span data-ro>Sistem hidraulic</span><span data-en>Hydraulic system</span></th><td><span data-ro>Load Sensing by Rexroth</span><span data-en>Load Sensing by Rexroth</span></td></tr><tr><th><span data-ro>Pompă de lucru</span><span data-en>Work pump</span></th><td><span data-ro>290 l/min · 300 bar</span><span data-en>290 l/min · 300 bar</span></td></tr><tr><th><span data-ro>Pompă deplasare</span><span data-en>Travel pump</span></th><td><span data-ro>210 l/min · 400 bar</span><span data-en>210 l/min · 400 bar</span></td></tr><tr><th><span data-ro>Powerline (opțional)</span><span data-en>Powerline (optional)</span></th><td><span data-ro>220 l/min · max. 350 bar</span><span data-en>220 l/min · max. 350 bar</span></td></tr><tr><th><span data-ro>Viteză de rotire</span><span data-en>Slewing speed</span></th><td><span data-ro>până la 10 rot/min</span><span data-en>up to 10 rpm</span></td></tr></table></div>
   </div>
 </article>
 <article class="model" id="m525x">
   <div class="wrap">
     <div><img src="/images/m525x.jpg" alt="Menzi Muck M525x" class="pic" loading="lazy">
       <h2>Menzi Muck M525x</h2>
-      <div class="kg">de la 12.400 kg</div>
-      <ul class="chips"><li>Transmisie continuă Vx-Drive by Menzi, până la 15 km/h</li><li>Două punți detașabile cu roți de rulare</li><li>Sprijin telescopic hidraulic</li></ul>
-      <a class="btn solid" href="/#contact">Cere ofertă pentru M525x</a>
+      <div class="kg"><span data-ro>de la 12.400 kg</span><span data-en>from 12,400 kg</span></div>
+      <ul class="chips"><li><span data-ro>Transmisie continuă Vx-Drive by Menzi, până la 15 km/h</span><span data-en>Continuous Vx-Drive transmission by Menzi, up to 15 km/h</span></li><li><span data-ro>Două punți detașabile cu roți de rulare</span><span data-en>Two detachable axles with road wheels</span></li><li><span data-ro>Sprijin telescopic hidraulic</span><span data-en>Hydraulic telescopic support</span></li></ul>
+      <a class="btn solid" href="/#contact"><span data-ro>Cere ofertă pentru M525x</span><span data-en>Request a quote for M525x</span></a>
     </div>
-    <div><table class="spec"><caption>Date tehnice</caption><tr><th>Motor</th><td>Deutz turbo diesel, 4 cilindri — 115 kW / 156 CP</td></tr><tr><th>Cilindree</th><td>4.038 cm³</td></tr><tr><th>Instalație electrică</th><td>24 V</td></tr><tr><th>Demaror</th><td>4,0 kW</td></tr><tr><th>Interval service</th><td>500 h</td></tr><tr><th>Sistem hidraulic</th><td>Load Sensing by Rexroth</td></tr><tr><th>Pompă de lucru</th><td>290 l/min · 300 bar</td></tr><tr><th>Pompă deplasare</th><td>210 l/min · 400 bar</td></tr><tr><th>Powerline (opțional)</th><td>220 l/min</td></tr><tr><th>Viteză de rotire</th><td>până la 10 rot/min</td></tr></table></div>
+    <div><table class="spec"><caption><span data-ro>Date tehnice</span><span data-en>Technical data</span></caption><tr><th><span data-ro>Motor</span><span data-en>Engine</span></th><td><span data-ro>Deutz turbo diesel, 4 cilindri — 115 kW / 156 CP</span><span data-en>Deutz turbo diesel, 4 cyl. — 115 kW / 156 hp</span></td></tr><tr><th><span data-ro>Cilindree</span><span data-en>Displacement</span></th><td><span data-ro>4.038 cm³</span><span data-en>4.038 cm³</span></td></tr><tr><th><span data-ro>Instalație electrică</span><span data-en>Electrical system</span></th><td><span data-ro>24 V</span><span data-en>24 V</span></td></tr><tr><th><span data-ro>Demaror</span><span data-en>Starter</span></th><td><span data-ro>4,0 kW</span><span data-en>4,0 kW</span></td></tr><tr><th><span data-ro>Interval service</span><span data-en>Service interval</span></th><td><span data-ro>500 h</span><span data-en>500 h</span></td></tr><tr><th><span data-ro>Sistem hidraulic</span><span data-en>Hydraulic system</span></th><td><span data-ro>Load Sensing by Rexroth</span><span data-en>Load Sensing by Rexroth</span></td></tr><tr><th><span data-ro>Pompă de lucru</span><span data-en>Work pump</span></th><td><span data-ro>290 l/min · 300 bar</span><span data-en>290 l/min · 300 bar</span></td></tr><tr><th><span data-ro>Pompă deplasare</span><span data-en>Travel pump</span></th><td><span data-ro>210 l/min · 400 bar</span><span data-en>210 l/min · 400 bar</span></td></tr><tr><th><span data-ro>Powerline (opțional)</span><span data-en>Powerline (optional)</span></th><td><span data-ro>220 l/min · max. 350 bar</span><span data-en>220 l/min · max. 350 bar</span></td></tr><tr><th><span data-ro>Viteză de rotire</span><span data-en>Slewing speed</span></th><td><span data-ro>până la 10 rot/min</span><span data-en>up to 10 rpm</span></td></tr></table></div>
   </div>
 </article>
 <section class="panel short center">
   <div class="media"><img src="/images/slope.jpg" alt="" loading="lazy"></div>
-  <div class="wrap"><h2>Vrei să-l vezi lucrând?</h2><p class="sub">Vă ducem la un Menzi Muck în lucru și venim pe șantierul dumneavoastră cu un calcul de cost pe oră pentru lucrarea concretă.</p>
-  <p class="sub"><a href="/excavator-paianjen/" style="text-decoration:underline">Ce este un excavator păianjen și cum alegi modelul</a></p>
-  <div class="btn-row"><a class="btn solid" href="/#contact">Programează o vizită</a><a class="btn" href="tel:+40723675581">+40 723 675 581</a></div></div>
+  <div class="wrap"><h2><span data-ro>Vrei să-l vezi lucrând?</span><span data-en>Want to see it working?</span></h2><p class="sub"><span data-ro>Vă ducem la un Menzi Muck în lucru și venim pe șantierul dumneavoastră să stabilim modelul și accesoriile potrivite pentru lucrare.</span><span data-en>We take you to a Menzi Muck at work and come to your site to settle the right model and attachments for the job.</span></p>
+  <p class="sub"><a href="/excavator-paianjen/" style="text-decoration:underline"><span data-ro>Ce este un excavator păianjen și cum alegi modelul</span><span data-en>What a spider excavator is and how to choose the model</span></a></p>
+  <div class="btn-row"><a class="btn solid" href="/#contact"><span data-ro>Programează o vizită</span><span data-en>Book a visit</span></a><a class="btn" href="tel:+40723675581">+40 723 675 581</a></div></div>
 </section>
 
 <footer>
   <div class="wrap">
     <div>Baier Solutions SRL · Hărman, Brașov · CIF RO33270728</div>
     <ul>
-      <li><a href="/excavator-paianjen/">Excavator păianjen</a></li>
+      <li><a href="/excavator-paianjen/"><span data-ro>Excavator păianjen</span><span data-en>Spider excavator</span></a></li>
       <li><a href="/m5x.html">M5x</a></li><li><a href="/m4x.html">M4x</a></li><li><a href="/m2.html">M2</a></li><li><a href="/a20-a25.html">A20 / A25</a></li>
-      <li><a href="/ghid/">Ghid</a></li>
+      <li><a href="/ghid/"><span data-ro>Ghid</span><span data-en>Guide</span></a></li>
       <li><a href="/blog/">Blog</a></li>
     </ul>
     <ul>
       <li><a href="tel:+40723675581">+40 723 675 581</a></li>
       <li><a href="mailto:christoph@baiersolutions.ro">christoph@baiersolutions.ro</a></li>
+      <li><a href="https://menzimuck.ro">menzimuck.ro</a></li>
       <li><a href="https://menzimuck.com" rel="noopener">menzimuck.com</a></li>
       <li><a href="https://baiersolutions.ro" rel="noopener">baiersolutions.ro</a></li>
     </ul>
-    <div class="legal">© 2026 Baier Solutions SRL, importator oficial Menzi Muck AG (Rüthi, Elveția) pentru România și Republica Moldova. Menzi Muck® este marcă înregistrată a Menzi Muck AG; fotografiile și materialele video sunt proprietatea Menzi Muck AG și sunt folosite cu acordul acesteia. Datele tehnice sunt orientative — configurația finală și prețul se stabilesc prin ofertă.</div>
+    <div class="legal"><span data-ro>© 2026 Baier Solutions SRL, importator oficial Menzi Muck AG (Rüthi, Elveția) pentru România și Republica Moldova. Menzi Muck® este marcă înregistrată a Menzi Muck AG; fotografiile și materialele video sunt proprietatea Menzi Muck AG și sunt folosite cu acordul acesteia. Datele tehnice sunt orientative — configurația finală și prețul se stabilesc prin ofertă.</span><span data-en>© 2026 Baier Solutions SRL, official importer of Menzi Muck AG (Rüthi, Switzerland) for Romania and the Republic of Moldova. Menzi Muck® is a registered trademark of Menzi Muck AG; the photos and videos are the property of Menzi Muck AG and are used with its consent. Technical data is indicative — the final configuration and price are set by quote.</span></div>
   </div>
 </footer>
+<script>
+(function(){
+  var b=document.body,btns=document.querySelectorAll('[data-lang]');
+  function set(l){b.className='lang-'+l;document.documentElement.lang=l;
+    btns.forEach(function(x){x.setAttribute('aria-pressed',String(x.dataset.lang===l))});
+    try{localStorage.setItem('lang',l)}catch(e){}}
+  btns.forEach(function(x){x.addEventListener('click',function(){set(x.dataset.lang)})});
+  var s=null;try{s=localStorage.getItem('lang')}catch(e){}
+  if(s==='en')set('en');
+})();
+</script>
 <script>
 (function(){var n=document.getElementById('nav');function s(){n.classList.toggle('solid',window.scrollY>40)}addEventListener('scroll',s,{passive:true});s();
 var v=document.querySelector('.hero video');if(v){v.addEventListener('canplay',function(){v.classList.add('ready')});if(matchMedia('(prefers-reduced-motion: reduce)').matches||(navigator.connection&&navigator.connection.saveData)){v.remove()}else{v.play().catch(function(){})}}
